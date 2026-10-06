@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #f2f3f5;
+    background-color: #0c0d0e;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Pulsing highlight animation for deep-linked settings anchors */
+@keyframes anchorPulse {
+  0% {
+    background-color: rgba(59, 130, 246, 0.28);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.8);
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.12);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.anchor-highlight {
+  animation: anchorPulse 3.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  border-radius: 8px;
+}
+
+/* Draggable titlebar */
+.titlebar-drag-region {
+  -webkit-app-region: drag;
+}
+
+.titlebar-no-drag {
+  -webkit-app-region: no-drag;
+}

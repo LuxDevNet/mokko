@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+development/node_modules/
+
+# Intermediate compilation artifacts
+dist/
+dist-electron/
+release/
+development/dist/
+development/dist-electron/
+development/release/
+
+# Large unpacked binaries (>100MB exceeds GitHub push limits)
+deployment/dist/win-unpacked/
+deployment/dist/*.exe
+*.blockmap
+
+# Logs and environment
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.env
+.env.local

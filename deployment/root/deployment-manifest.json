@@ -1,0 +1,21 @@
+{
+  "name": "Mokko",
+  "version": "1.0.0",
+  "appId": "com.mokko.desktop",
+  "installer": {
+    "type": "nsis",
+    "filename": "Mokko Setup 1.0.0.exe",
+    "targetPlatform": "win32",
+    "architectures": ["x64", "arm64"],
+    "shortcutName": "Mokko",
+    "customInstallDirectory": true,
+    "protocols": ["mokko", "grokbot"]
+  },
+  "buildMetadata": {
+    "framework": "Electron v33.4.11",
+    "backend": "Hono v4.6.14",
+    "frontend": "React 18 + Vite 6",
+    "styling": "Tailwind CSS",
+    "packagingTool": "electron-builder v25.1.8"
+  }
+}

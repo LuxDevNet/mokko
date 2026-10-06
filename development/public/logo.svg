@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bg-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#141c2e" />
+      <stop offset="60%" stop-color="#0a0c10" />
+      <stop offset="100%" stop-color="#050608" />
+    </radialGradient>
+
+    <!-- Neon Cyberpunk Gradients -->
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="bevel-light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Glowing Drop Shadow Filters -->
+    <filter id="neon-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="core-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0.95   0 0 0 0 1   0 0 0 0.8 0" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base App Tile with Squircle Border -->
+  <rect width="512" height="512" rx="112" fill="url(#bg-glow)" />
+  <rect x="6" y="6" width="500" height="500" rx="106" stroke="url(#bevel-light)" stroke-width="2" />
+  <rect x="12" y="12" width="488" height="488" rx="100" stroke="#1e2433" stroke-width="2" stroke-opacity="0.6" />
+
+  <!-- Ambient Holographic Back-Grid -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="1">
+    <line x1="96" y1="96" x2="416" y2="416" />
+    <line x1="416" y1="96" x2="96" y2="416" />
+    <circle cx="256" cy="256" r="140" stroke-dasharray="4 8" />
+    <circle cx="256" cy="256" r="190" stroke-dasharray="2 12" />
+  </g>
+
+  <!-- Futuristic Dimensional Hex-Prism / Mokko Slash Core -->
+  <g filter="url(#neon-glow-filter)">
+    <!-- Primary Outer Angular Bevel Bracket -->
+    <path
+      d="M148 168 L256 104 L364 168 L364 344 L256 408 L148 344 Z"
+      fill="#0c1017"
+      stroke="url(#neon-purple)"
+      stroke-width="5"
+      stroke-linejoin="round"
+    />
+
+    <!-- Diagonal Mokko Hyper-Slash Accent 1 -->
+    <path
+      d="M172 324 L316 148 L348 148 L204 324 Z"
+      fill="url(#neon-cyan)"
+      opacity="0.95"
+    />
+
+    <!-- Diagonal Mokko Hyper-Slash Accent 2 -->
+    <path
+      d="M228 356 L340 216 L356 216 L244 356 Z"
+      fill="url(#neon-purple)"
+      opacity="0.8"
+    />
+
+    <!-- Horizontal Quantum Beam Bridge -->
+    <path
+      d="M148 256 H272 L296 284 H148 Z"
+      fill="#1e293b"
+      stroke="#38bdf8"
+      stroke-width="2"
+      opacity="0.85"
+    />
+
+    <!-- Glowing Cyber Core Node -->
+    <circle cx="256" cy="256" r="18" fill="#ffffff" filter="url(#core-glow)" />
+    <circle cx="256" cy="256" r="8" fill="#00f2fe" />
+  </g>
+
+  <!-- High-tech Corner Accent Ticks -->
+  <path d="M128 144 H160 M128 144 V176" stroke="#00f2fe" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+  <path d="M384 144 H352 M384 144 V176" stroke="#a855f7" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+  <path d="M128 368 H160 M128 368 V336" stroke="#a855f7" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+  <path d="M384 368 H352 M384 368 V336" stroke="#00f2fe" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+</svg>
